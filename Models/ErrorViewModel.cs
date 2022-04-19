@@ -1,5 +1,3 @@
-using System;
-
 namespace WebLab4.Models
 {
     public class ErrorViewModel

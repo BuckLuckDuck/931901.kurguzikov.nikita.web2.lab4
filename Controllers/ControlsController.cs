@@ -1,10 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using WebLab4.Models;
 
 namespace WebLab4.Controllers
@@ -25,7 +20,7 @@ namespace WebLab4.Controllers
 
         public IActionResult TextBox(string State)
         {
-           
+
 
             if (Request.Method == "POST")
             {
@@ -79,7 +74,7 @@ namespace WebLab4.Controllers
             else
                 return View();
         }
-       
+
         public IActionResult DropDownList(string State)
         {
 

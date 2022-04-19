@@ -1,13 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using WebLab4.Models;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Diagnostics;
+using WebLab4.Models;
 
 namespace WebLab4.Controllers
 {
@@ -34,7 +28,7 @@ namespace WebLab4.Controllers
                 {
                     ViewBag.Code = "Your code: " + User.Code;
                     return View(User);
-                    
+
                 }
                 return Redirect("Confirm");
             }
@@ -83,8 +77,8 @@ namespace WebLab4.Controllers
             if (ModelState["Email"].ValidationState == ModelValidationState.Valid &
                 ModelState["Password"].ValidationState == ModelValidationState.Valid &
                 ModelState["ComparePassword"].ValidationState == ModelValidationState.Valid)
-                return View("Result",inf);
-                
+                return View("Result", inf);
+
             return View();
         }
 
